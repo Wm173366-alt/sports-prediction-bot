@@ -45,9 +45,11 @@ async def predict_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         entry += f"⚡  _Confiance : {res['confidence']}_\n\n"
         
         entry += "📝  *Détails & Stats :*\n"
-        entry += f"  • 🥅  {res['goals']}\n"
         
-        if res.get('sport') == 'football':
+        if res.get('sport') == 'basketball':
+            entry += f"  • 🏀  {res['goals']}\n"
+        else:
+            entry += f"  • 🥅  {res['goals']}\n"
             entry += f"  • 🚩  Corners : {res['corners']}\n"
             entry += f"  • 🛡️  Fautes : {res['fouls']}\n"
             entry += f"  • 🟨  Cartons : {res['yellow_cards']}\n"
