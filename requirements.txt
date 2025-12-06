@@ -1,0 +1,9 @@
+python-telegram-bot
+pandas
+scikit-learn
+sqlalchemy
+apscheduler
+requests
+beautifulsoup4
+python-dotenv
+
